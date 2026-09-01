@@ -269,6 +269,8 @@
 //#undef ENABLE_DRIVER_BL0937
 //#undef ENABLE_DRIVER_BL0942
 #define ENABLE_DRIVER_IRREMOTEESP				1
+#define ENABLE_DRIVER_RC						1
+#undef ENABLE_DRIVER_IR
 //#endif
 //#define ENABLE_DRIVER_NEO6M						1
 #define ENABLE_DRIVER_TINYIR_NEC				1
@@ -294,7 +296,7 @@
 #define ENABLE_LITTLEFS							1
 #define ENABLE_NTP								1
 // #define ENABLE_TIME_DST						1
-#define ENABLE_TIME_SUNRISE_SUNSET				1
+#define ENABLE_TIME_SUNRISE_SUNSET				0
 #define ENABLE_DRIVER_LED						1
 #define ENABLE_DRIVER_BL0937					1
 #define ENABLE_DRIVER_BL0942					1
@@ -340,6 +342,7 @@
 #endif
 #define ENABLE_DRIVER_IRREMOTEESP				1
 #define ENABLE_DRIVER_RC						1
+#undef ENABLE_DRIVER_IR
 // #define ENABLE_DRIVER_IR2					1
 #define ENABLE_DRIVER_DS1820					1
 #define ENABLE_DRIVER_CHT83XX					1
