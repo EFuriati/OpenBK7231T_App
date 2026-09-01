@@ -820,7 +820,9 @@
 #if ! ENABLE_LITTLEFS
 #undef ENABLE_LOG2LFS
 #endif
-
+// Forçar driver irRemoteESP no final absoluto do arquivo
+#undef ENABLE_DRIVER_IR
+#define ENABLE_DRIVER_IRREMOTEESP 1
 
 // closing OBK_CONFIG_H
 #endif
