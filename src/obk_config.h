@@ -79,7 +79,7 @@
 #define ENABLE_DRIVER_PIXELANIM					1
 #define ENABLE_OBK_BERRY						1
 #define ENABLE_DRIVER_MDNS						1
-#define ENABLE_DRIVER_IR						1
+#define ENABLE_DRIVER_IR						0
 #define ENABLE_DRIVER_BATTERY					1
 //#define ENABLE_DRIVER_IRREMOTEESP				1
 #endif
@@ -206,8 +206,8 @@
 #define ENABLE_DRIVER_SSDP						1
 #define ENABLE_DRIVER_ADCBUTTON					1
 #define ENABLE_DRIVER_SM15155E					1
-// #define ENABLE_DRIVER_IR						1
-// #define ENABLE_DRIVER_IR2					1
+// #define ENABLE_DRIVER_IR						0
+// #define ENABLE_DRIVER_IR2					0
 #define ENABLE_DRIVER_CHARTS					1
 #define ENABLE_DRIVER_WIDGET					1
 #define ENABLE_DRIVER_OPENWEATHERMAP			1
@@ -320,11 +320,13 @@
 #define ENABLE_DRIVER_HUE						1
 // #define ENABLE_DRIVER_CHARGINGLIMIT			1
 #define ENABLE_DRIVER_BATTERY					1
+#define ENABLE_DRIVER_TCL						1
 #if PLATFORM_BK7231N || PLATFORM_BEKEN_NEW
 // #define ENABLE_DRIVER_PWM_GROUP				1
 #define ENABLE_DRIVER_SM16703P					1
 #define ENABLE_DRIVER_PIXELANIM					1
 #define ENABLE_DRIVER_SM15155E					1
+#define ENABLE_DRIVER_TCL						1
 
 #endif
 // parse things like $CH1 or $hour etc
@@ -356,6 +358,7 @@
 //#define ENABLE_DRIVER_NEO6M					1
 //#define ENABLE_DRIVER_ARISTON					1
 //#define ENABLE_DRIVER_ROOMBA				    1
+#define ENABLE_DRIVER_TCL						1
 
 // ENABLE_I2C_ is a syntax for
 // our I2C system defines for drv_i2c_main.c
@@ -370,6 +373,7 @@
 #if (OBK_VARIANT == OBK_VARIANT_TUYAMCU || OBK_VARIANT == OBK_VARIANT_POWERMETERING || OBK_VARIANT == OBK_VARIANT_IRREMOTEESP || OBK_VARIANT == OBK_VARIANT_HLW8112)
 #undef ENABLE_DRIVER_LED
 #undef ENABLE_I2C
+#define ENABLE_DRIVER_TCL						1
 #undef ENABLE_DRIVER_BATTERY
 #undef ENABLE_DRIVER_SM16703P
 #undef ENABLE_DRIVER_PIXELANIM
@@ -404,6 +408,7 @@
 #if (OBK_VARIANT == OBK_VARIANT_IRREMOTEESP)
 #undef ENABLE_DRIVER_DDP
 #define ENABLE_DRIVER_IRREMOTEESP				1
+#define ENABLE_DRIVER_TCL						1
 #endif
 
 #if (OBK_VARIANT == OBK_VARIANT_SENSORS || OBK_VARIANT == OBK_VARIANT_BATTERY)
@@ -823,6 +828,7 @@
 // Forçar driver irRemoteESP no final absoluto do arquivo
 #undef ENABLE_DRIVER_IR
 #define ENABLE_DRIVER_IRREMOTEESP 1
+  #define ENABLE_DRIVER_TCL						1
 
 // closing OBK_CONFIG_H
 #endif
