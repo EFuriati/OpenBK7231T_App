@@ -18,6 +18,9 @@
 #define OBK_VARIANT_ESP4M						2
 #define OBK_VARIANT_ESP2M_BERRY					3
 
+#undef OBK_VARIANT
+#define OBK_VARIANT OBK_VARIANT_IRREMOTEESP
+
 // Starts with all driver flags undefined
 
 // NOTE:
