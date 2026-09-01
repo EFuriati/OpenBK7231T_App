@@ -18,9 +18,6 @@
 #define OBK_VARIANT_ESP4M						2
 #define OBK_VARIANT_ESP2M_BERRY					3
 
-#undef OBK_VARIANT
-#define OBK_VARIANT OBK_VARIANT_IRREMOTEESP
-
 // Starts with all driver flags undefined
 
 // NOTE:
@@ -81,7 +78,6 @@
 #define ENABLE_DRIVER_MDNS						1
 #define ENABLE_DRIVER_IR						0
 #define ENABLE_DRIVER_BATTERY					1
-//#define ENABLE_DRIVER_IRREMOTEESP				1
 #endif
 
 #elif PLATFORM_W600
@@ -268,9 +264,8 @@
 //#undef ENABLE_DRIVER_CSE7766
 //#undef ENABLE_DRIVER_BL0937
 //#undef ENABLE_DRIVER_BL0942
-#define ENABLE_DRIVER_IRREMOTEESP				1
 #define ENABLE_DRIVER_RC						1
-#undef ENABLE_DRIVER_IR
+#define ENABLE_DRIVER_IR  1
 //#endif
 //#define ENABLE_DRIVER_NEO6M						1
 #define ENABLE_DRIVER_TINYIR_NEC				1
@@ -342,9 +337,9 @@
 #if PLATFORM_BK7231N || PLATFORM_BK7231T || PLATFORM_BK7238
 #define ENABLE_DRIVER_MDNS						1
 #endif
-#define ENABLE_DRIVER_IRREMOTEESP				1
+#define ENABLE_DRIVER_IR				1
 #define ENABLE_DRIVER_RC						1
-#undef ENABLE_DRIVER_IR
+
 // #define ENABLE_DRIVER_IR2					1
 #define ENABLE_DRIVER_DS1820					1
 #define ENABLE_DRIVER_CHT83XX					1
@@ -407,7 +402,7 @@
 
 #if (OBK_VARIANT == OBK_VARIANT_IRREMOTEESP)
 #undef ENABLE_DRIVER_DDP
-#define ENABLE_DRIVER_IRREMOTEESP				1
+#define ENABLE_DRIVER_IR				1
 #define ENABLE_DRIVER_TCL						1
 #endif
 
@@ -825,10 +820,7 @@
 #if ! ENABLE_LITTLEFS
 #undef ENABLE_LOG2LFS
 #endif
-// Forçar driver irRemoteESP no final absoluto do arquivo
-#undef ENABLE_DRIVER_IR
-#define ENABLE_DRIVER_IRREMOTEESP 1
-  #define ENABLE_DRIVER_TCL						1
+
 
 // closing OBK_CONFIG_H
 #endif
